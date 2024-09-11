@@ -3,52 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitung BMI</title>
+    <title>Fitmetricks - Aplikasi Hitung BMI</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .container h1 {
+            margin: 0;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <img src="logo.jpg" width="250">
-        <h2>Hitung BMI</h2>
-        <form>
-            <label for="tinggi">Tinggi (cm)*:</label>
-            <input type="number" id="tinggi" required><br>
-            <label for="berat">Berat (kg)*:</label>
-            <input type="number" id="berat" required><br>
-            <button type="button" onclick="hitungBMI()">Hitung BMI</button>
-        </form>
+        <img src="logo_bmi.jpg" width="100">
+        <h1>FITMETRICKS</h1>
+        <p>Aplikasi Hitung BMI</p>
+        <a href="simpan.html" class="button">Masuk</a>
     </div>
-
-    <script>
-        function hitungBMI() {
-            var tinggi = document.getElementById('tinggi').value;
-            var berat = document.getElementById('berat').value;
-
-            if (tinggi && berat) {
-                tinggi = tinggi / 100; // Konversi tinggi ke meter
-                var bmi = berat / (tinggi * tinggi); // Rumus BMI
-                var kategori;
-
-                if (bmi < 18.5) {
-                    kategori = "underweight";
-                } else if (bmi >= 18.5 && bmi <= 24.9) {
-                    kategori = "normal";
-                } else if (bmi >= 25 && bmi <= 29.9) {
-                    kategori = "overweight";
-                } else {
-                    kategori = "obese";
-                }
-
-                // Simpan data ke localStorage
-                localStorage.setItem("bmi", bmi.toFixed(2));
-                localStorage.setItem("kategori", kategori);
-
-                // Redirect ke halaman hasil
-                window.location.href = "hasil.html";
-            } else {
-                alert("Tolong isi semua kolom!");
-            }
-        }
-    </script>
 </body>
 </html>
