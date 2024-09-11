@@ -4,10 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #2980b9;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+    </style>
 </head>
 <body>
-    <div>
-        kia, regi, trie, ire, jaki, yopi
+    <div class="container">
+        <h1>Tentang Kami</h1>
+        <p>Kami adalah tim kreatif yang berdedikasi untuk menyediakan layanan terbaik bagi pelanggan kami.</p>
+
+        <div class="team-container">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Kia">
+                <h3>Kia</h3>
+                <p>CEO & Founder</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Regi">
+                <h3>Regi</h3>
+                <p>Lead Developer</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Trie">
+                <h3>Trie</h3>
+                <p>UI/UX Designer</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Ire">
+                <h3>Ire</h3>
+                <p>Marketing Specialist</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Jaki">
+                <h3>Jaki</h3>
+                <p>Product Manager</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://via.placeholder.com/120" alt="Yopi">
+                <h3>Yopi</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Tim Kami. Semua Hak Dilindungi.</p>
+    </footer>
 </body>
 </html>
